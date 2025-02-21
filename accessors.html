@@ -1,21 +1,22 @@
 <html>
     <head>
         <script>
-        var msanii = {
+        var musician = {
+            _name: "Ram-G"
+        };
 
-            _name: "Ram",
+        Object.defineProperty(musician, "jina", {
+                get: function() {
+                    return this._name;
+                },
+                set: function(name) {
+                    this._name = name;
+                },
+                enumerable: true,
+                configurable: true,
+        });
 
-            get jina() {
-                return this._name;
-            },
-
-            set jina(name) {
-                this._name = name;
-            }
-
-        }
-
-        console.log(msanii.jina);
+        console.log(musician.jina);
 
         </script>
     </head>
